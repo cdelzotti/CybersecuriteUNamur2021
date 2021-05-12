@@ -1,0 +1,143 @@
+
+    {
+        "name" : "Matière du cours de Sécurité, juin 2021, Chapitre 1",
+        "elements" : [
+            {
+                "value" : "Comment fonctionne le 'Risk management' ?",
+                "answer" : "C'est un processus avant tout \n    -itératif : Nécessite de réévaluer régulièrement le système\n   - Récursif : Nécessite d'évaluer le système complet suivi des composants\n    - Supportée par des méthodes : Comme Octave, CRAMM, EBIOS, etc"
+            },
+            {
+                "value" : "Qu'est-ce qu'un 'Asset' ?",
+                "answer" : "Un élément de valeur pour l'organisation"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'Vulnérabilité' ?",
+                "answer" : "Une faiblesse d'un asset ou un contrôle qui peut être exploité par une menace"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'Menace' ?",
+                "answer" : "Cause potentielle d'un incident non désiré qui peut résulter en des dégâts pour le système ou l'organisation"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'Conséquence' ?",
+                "answer" : "Résultats d'un évènement affectant les 'objectives' de l'organisation"
+            },
+            {
+                "value" : "Qu'est-ce qu'un 'Risque' ?",
+                "answer" : "Incertitude liées à un ou plusieurs 'objectives'"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'identification de risque' ?",
+                "answer" : "Processus consistant à trouver, reconnaître et décrire un risque"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'analyse de risque' ?",
+                "answer" : "Processus consistant à comprendre la nature des risques et à déterminer leur niveau"
+            },
+            {
+                "value" : "Qu'est-ce qu'une 'évaluation de risque' ?",
+                "answer" : "Processus consistant en la comparaison des résultats de l'analyse de risque avec les critères de risques pour déterminer si le risque est accesptable ou tolérable"
+            },
+            {
+                "value" : "Qu'est-ce qu'un 'Risk assessment' ?",
+                "answer" : "Processus reprenant l'identification de risque, l'analyse de risque et l'évaluation de risque"
+            },
+            {
+                "value" : "Dans le cadre du cours, nous avons vu plusieurs normes ISO. Lesquelles et que contiennent-elles ?",
+                "answer" : "- ISO 27000 : Overview et vocabulaire\n- ISO 27001 : Requirements\n- ISO27002 : Code of practice for information security control\n- ISO 27005 : Information security risk management"
+            },
+            {
+                "value" : "De quoi est composé un 'Management System' ?",
+                "answer" : "-Une Policy\n-Des Personnes avec des responsabilités définies\nDes processus liées à:\n\t-Policy establishment\n\t-Awareness and competence provision\n\t-Planning\n\t-Implementation\n\t-Operation\n\t-Performence assessment\n\t-Management review\n\t-Improvement\n-Des informations documentées"
+            },
+            {
+                "value" : "Quelle est la particularité d'un 'Information Security Management System' ?",
+                "answer" : "C'est un Management System qui inclu le risk assessment et le traitement du risque."
+            },
+            {
+                "value" : "Quels sont les principes de l'ISO 27001 ?",
+                "answer" : "- Spécifie les éléments nécessaires pour établir, implémenter, et continuellement améliorer un 'information security management system'\n- Includes requirements for the assessment and treatment of information security risks"
+            },
+            {
+                "value" : "Quels sont les composants de la roue de Deming et comment sont ils liés ?",
+                "answer" : "Répéter : Plan -> Do -> Check -> Act"
+            },
+            {
+                "value" : "Que dit la clause 4 de la norme ISO 27001 sur le contexte d'une organisation ?",
+                "answer" : "Qu'il faut :\n\n - Comprendre l'organisation et son contexte\n- Comprendre les besoins et attentes des parties concernées\nNécessairement un 'Information Security Management System' et comprendre son étendue" 
+            },
+            {
+                "value" : "Que dit la clause 5 de la norme ISO 27001 sur le leadership ?",
+                "answer" : "- Le top management doit faire preuve de leadership dans le respect de l'Information Security Management System : Définir des objectifs alignés avec la stratégie de l'organisation, allouer suffisament de ressources, promouvoir l'amélioration continue, diriger et encourager les personnes.\n - Le top management doit établir une policy pour la sécurité de l'information : Elle doit être appropriée à l'objectif de l'organisation (notament les objectifs de sécurité), impliquer l'amélioration continue de l'Information Security Management System, être disponible et communiquée\n- Le top management doit s'assurer que les responsabilités et autorités des rôles sont assignées et communiquées (Un rôle consiste à s'assurer que l'Information Security Management System soit conforme aux standards ISO et à rendre compte de sa performence auprès du top management)" 
+            },
+            {
+                "value" : "Que dit la clause 6 de la norme ISO 27001 sur le planning ?",
+                "answer" : "- L'organisation doit déterminer les risques et opportunités qui doivent être gérés, définir et appliquer un 'risk assessment process' accompagné d'un 'risk treatement process'\n- Assessment results should be consistent, valid and comparable\n- Le 'statement of Applicability' contient la liste des contrôles nécessaires et une justification de leur inclusion ou de leur exclusion\n- L'organisation doit établir des objectifs de sécurité là où c'est pertinent\n- Un planning doit inclure l'action, les ressources, le timing, la responsabilité et l'évaluation du processus afin de s'adresser à un problème particulier." 
+            },
+            {
+                "value" : "Que dit la clause 7 de la norme ISO 27001 sur le support ?",
+                "answer" : "- L'organisation doit déterminer et apporter les ressources nécessaires pour l'établissement, l'implémentation, la maintenance et l''amélioration continue d'un Information Security Management System\n-L'organisation doit déterminer les besoins de communication interne et externe\n-L'Information Security Management System doit être document selon le format approprié, avec un processus de review et d'identification ainsi qu'une description des documents.\n- La documentation doit être adéquatement protégée" 
+            },
+            {
+                "value" : "Que dit la clause 8 de la norme ISO 27001 sur les opérations ?",
+                "answer" : "- L'organisation doit planifier, implémenter et contrôler les processus nécéssaires pour satisfaire les security requirements, ainsi que pour implémenter les actions pour satisfaire les security objectives; La documentation doit être maintenue et une review des changements doit être organisée\n- L'organisation doit réaliser des risk assessments à intervals planifiés et lors de changements significatifs dans le fonctionnement de l'information security management system\n-L'organisation doit implémenter le 'risk treatment plan'" 
+            },
+            {
+                "value" : "Que dit la clause 9 de la norme ISO 27001 sur l'évaluation des performances ?",
+                "answer" : "- L'organisation doit évaluer les performances liées à la sécurité de l'information et l'efficacité de l'Information Security Management System, en identifiant les acteurs, monitorant les méthodes et en prenant en compte les responsabilités des résultats d'analyse\n- L'organisation doit réaliser des audits à intervals réguliers pour déterminer si l'Information Security Management est conforme à ses propres requirements et à la norme ISO.\n- Le top management doit review l'Information Security Management System a intervals planifiés pour s'assurer que celui-ci est adéquat et efficace." 
+            },
+            {
+                "value" : "Que dit la clause 10 de la norme ISO 27001 sur l'amélioration ?",
+                "answer" : "- Quand une non-conformité fait surface, l'organisation doit réagir et prendre des mesures pour la corriger et gérer ses conséquences\n- L'organisation doit continuellement améliorer l'adéquation et l'efficacité de l'Information Security Management System" 
+            },
+            {
+                "value" : "Comment fonctionne globalement la gestion du risque selon la norme ISO27005 ?",
+                "answer" : "1. Context establishment : Baliser et identifier ce qui fait l'objet de l'étude\n2. Risk identification : Identification exhaustive des risques pesant sur les actifs de l'organisation\n3. Risk analysis : Quantification du risque, à quel point il est important\n4. Risk evaluation : Partant des risques quantifié à l'étape précédente, on sélectionnera les risques pour lesquels le niveau n'est pas acceptable\n5. Se demander si les risques sont bien évalués. Si ce n'est pas le cas, recommencer à l'étape 2\n6. Traitement du risque : Établir un traitement pour gérer le risque, et établir le risque résiduel (Le risque restant étant donné que le risque zéro n'existe pas)\n7. Risk acceptance : Acceptation par la direction du traitement des risques.\n\nCes étapes se font en parallèles avec des processus de communication/consultation et de monitoring/review du risque." 
+            },
+            {
+                "value" : "En quoi consiste le 'Context Establishment' de l'ISO27005 ?",
+                "answer" : "Cette étape consiste en la compréhension du contexte dans lequel se trouve l'organisation, l'idenfication des parties concernées (Personnes ou organisations qui peuvent être affectées, etc) et la définition d'un de l'objectif de la gestion du risque (Déterminer les critères de base à respecter et le scope sur lequel ils s'appliquent)" 
+            },
+            {
+                "value" : "Quels sont les critères de base à établir dans le cadre d'un 'Context Establishment' dans l'ISO 27005 ?",
+                "answer" : "- Approche utilisée : le cadre ISO27005, EBIOS, d'autres merdes administratives, etc\n- Les critères d'évaluation du risque : Sur quoi je vais me baser pour mesurer un risque (La valeur de l'actif touché, les obligations légales, l'intégrité, la disponibilité, etc)\n- Les critères d'évaluation de l'impact : Quels sont les éléments qui me permettent de mesurer la gravité de l'impact (Dommage à la réputation de l'entreprise, continuité des affaires, etc)\n - Les critères d'acceptation : Identifier ce qu'on peut qualifier de risque acceptable" 
+            },
+            {
+                "value" : "En quoi consiste le scope et les limites à établir dans le cadre d'un 'Context Establishment' dans l'ISO 27005 ?",
+                "answer" : "- S'assurer que tous les éléments pertinents sont pris en compte et que le risque qui peut en sortir sont clairement identifiés (Cela inclu les actionnaires, les actifs, etc)\n\t - Le scope peut couvrir les applications IT, l'infrastructure IT, les sous-organisations, etc" 
+            },
+            {
+                "value" : "En quoi consiste 'l'organisation for information security management' dans le cadre d'un 'Context Establishment' dans l'ISO 27005 ?",
+                "answer" : "- Définition des rôles appropriés et leurs responsabilités :  Définition du processus de gestion du risque, identification des stakeholders, etc." 
+            },
+            {
+                "value" : "Donner les détails de l'étape d'identification du risque dans le cadre de l'ISO27005.",
+                "answer" : "- Identification des menaces : Qui peuvent blesser l'organisation et ses actifs, peuvent avoir une origine naturelle (environnement), etc\n- Identification des contrôles existant : Comprendre ce qui est déjà mis en place pour faire face à ce genre de problème\n- Identification des vulnérabilités : Sur base de la liste des assets, la liste des menaces ainsi que la liste des contrôles existant, définir la manière dont une menace peut s'attaquer à un asset.\n- Identification des conséquences : Identifier les conséquences qu'une perte de confidentialité, d'intégrité ou de disponibilité peut avoir sur les assets." 
+            },
+            {
+                "value" : "Donner les détails de l'étape d'analyse du risque dans le cadre de l'ISO27005.",
+                "answer" : "- Sélectionner l'approche appropriée (Quantitative ou qualitative)\n- Évaluation des conséquences : Établir une mesure de la sévérité des scénarios possibles en produisant une liste des conséquences évaluées pour un scénario.\n- Évaluation de la probabilité d'un incident : Établir une mesure de la probabilité qu'un certain évènement survienne\n- Détermination du niveau de risque : Déterminer le niveau de risque pour chaque scénario possible.\n" 
+            },
+            {
+                "value" : "Quels sont les indicateurs utiles pour une analyse de risque dans le cadre de l'ISO27005 et en quoi permettent-ils d'évaluer l'efficacité d'une mesure prise pour sécuriser un asset ?",
+                "answer" : "- Asset value (AV)\n- Facteur d'exposition (EF) : Portion de l'asset exposé dans le scénario considéré\n- Single Loss Expectansy (SLE) : AV x EF\n- Annualized rate of occurence (ARO) : Fréquence d'apparition du scénario considéré sur une année.\n- Annualized Loss Expectancy (ALE) : SLE x ARO\n\n\t-> L'efficacité d'une mesure peut être mesurée comme : (ALE avant la mesure) - (ALE après la mesure) - (Coût annuel pour mettre la mesure en place)" 
+            },
+            {
+                "value" : "En quoi consiste l'évaluation de risque dans le cadre de l'ISO27005 ?",
+                "answer" : "- À partir des critères d'acceptation définis dans la définition du contexte et la liste des risques établis à l'analyse de risques, identifier les risques à traiter et leur priorité." 
+            },
+            {
+                "value" : "En quoi consiste le traitement du risque dans le cadre de l'ISO27005 ?",
+                "answer" : "- Définir des moyens de contrôles pour gérer le risque\n- Les possibilités de gestion d'un risque sont : Le risk retention, le risk avoidance, le risk modification et le risk sharing." 
+            },
+            {
+                "value" : "En quoi consiste l'acceptation du risque dans le cadre de l'ISO27005 ?",
+                "answer" : "Approbation formelle par le management du plan d'action et du risque résiduel. Il est important de bien communiquer les risques restants et les mesures à prendre en compte pour que le management se rende bien compte de ce qu'il approuve." 
+            },
+            {
+                "value" : "Qu'est-ce qu'un arbre d'attaque ?",
+                "answer" : "Division d'un objectif à atteindre par un assaillant en sous-objectifs, eux-mêmes découpés en sous-sous-objectifs, et ainsi de suite. Permet de définir les chemins les plus possibles pour une attaque, le coût d'une attaque ainsi que ce qui doit être protégé en priorité." 
+            }
+        ]
+    }
+    
