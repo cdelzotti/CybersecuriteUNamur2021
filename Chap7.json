@@ -1,11 +1,34 @@
+{
+    "name": "Matière du cours de Sécurité, juin 2021, Chapitre 7",
+    "elements": [
+        {
+            "value": "Quels sont les 4 objectifs de sécurité d'un OS et les contrôles qui sont liés ?",
+            "answer": "- Confidentialité (Contenu privé à protéger): \n\t* Permissions\n\t* Contenu chiffré\n\t* Auditing and Reporting\n- Intégrité (Contenu à conserver) \n\t* Contenu chiffré \n\t* Permissions\n- Disponibilité\n- Traçabilité\n -> Typiquement un contrôlé des accès"
+        },
+        {
+            "value": "Quels sont les types des attaques qui impactent les objectifs de sécurité d'un OS ?",
+            "answer": "- Modification des accès\n\t* Backdoor (point d'accès caché\n\t* Login spoofing\n\t* Privilege escalation\n- Logic bomb"
+        },
+        {
+            "value": "Je vais te DDoS, j'ai ton IP! Qu'est-ce que l'attaque de Denial Of Service ?",
+            "answer": "Briser la disponibilité d'un système. (Voir slides DDOS pour plus d'info)."
+        },
+        {
+            "value": "Qu'est-ce qu'un malware ?",
+            "answer": "Terme très générique qui englobe une attaque à but mauvais sur un système informatique:\nEffets:\n- Blackmail (Chantage)\n- Spam relay\n- DDoS attacks\n- Vol de données, keylogger\n- Stockage et partage illégal de fichiers\n- Spread of malicious pieces of payload\n- Proxy malicious communications (to hide mothership)\n- Manipulation of polls, cracking of passwords\n- Perte de données, perte financière\n- Non disponibilité des systèmes pendant un temps non négligeables"
+        },
+        {
+            "value": "Quelles-sont les caractéristiques d'un malware dans son mode opératoire ?",
+            "answer": "Les malwares sont installés par l'exploitation de vulnérabilité et agissent le plus vite possible. En effet, la fenêtre 'fonctionnelle' du malware se situe entre son installation et l'application du patch de sécurité. (Il existe des plateformes de vente de failles btw)"
+        },
+        {
+            "value": "Vulnerability lifecycle?",
+            "answer": "discovered -> reported -> patch available -> patch applied"
 
-    {
-        "name" : "Matière du cours de Sécurité, juin 2021, Chapitre 7",
-        "elements" : [
-            {
-                "value" : "The question",
-                "answer" : "The answer"
-            }
-        ]
-    }
-    
+        },
+        {
+            "value": "Trojan?",
+            "answer": "Programmes exécutant du code non documenté et souvent non désiré.\nSe propage via des applications anodines en apparence.\nExécute le code malsain avec les privilèges de l'application 'décorative'."
+        }
+    ]
+}
