@@ -3,8 +3,128 @@
         "name" : "Matière du cours de Sécurité, juin 2021, Chapitre 3",
         "elements" : [
             {
-                "value" : "The question",
-                "answer" : "The answer"
+                "value" : "What does encrypt mean ?",
+                "answer" : "With the help of an encryption key, transform cleartext data into encrypted data, making it unreadable for anyone not able to decrypt it"
+            },
+            {
+                "value" : "What does decrypt mean ?",
+                "answer" : "With the help of a decryption key,recover original cleartext data from encrypted text data"
+            },
+            {
+                "value" : "What are encryption and decryption ?",
+                "answer" : "Same as encrypt and decrypt but based on algoritms. Also called cipher."
+            },
+            {
+                "value" : "What is cryptography ?",
+                "answer" : "Science (or art) of creating ciphers"
+            },
+            {
+                "value" : "What is Cryptanalysis ?",
+                "answer" : "Science (or art) of breaking ciphers"
+            },
+            {
+                "value" : "What is Cryptology ?",
+                "answer" : "Study of codes, both creating and breaking them"
+            },
+            {
+                "value" : "What are the 3 primitives of a cryptosystem ?",
+                "answer" : "1. KeyGen() : A mechanism to generate a key (or a pair of key)\n2. E(k,p) : An encryption mechanism, where k is the key and p a cleartext\n3.D(k,c) : A decryption mechanism, where k is  a key and c a ciphertext"
+            },
+            {
+                "value" : "What is the Kerckhoff's principle ?",
+                "answer" : "A cryptosystem should be secured even if everything about the system, except the key, is public knowledge"
+            },
+            {
+                "value" : "Quelles sont les différentes classes d'attaques ?",
+                "answer" : "- Attaque passive (eavesdropping) : Ne nécessite aucune interaction avec les parties ciblées, difficile à détecter (ex : Analyse des enregistrement DNS)\n- Attaque active : type d'attaque nécessitant de l'identity spoofing et la falsification des communications (Ajouter, modifier, supprimer des paquets) (ex : Man In The Middle)\n- Attaque de rejeu : Renvoyer un message déjà envoyé \n- Side-channel attack : Attaque basée sur des informations concernant l'implémentation physique des méchanismes de cryptographie (Consommation d'électricité, etc)\n- Timing attack : Infer information about the cryptographic process from the time it takes"
+            },
+            {
+                "value" : "What is a bruteforce attack ?",
+                "answer" : "Exploring the keyspace to find the key (On average, half the keyspace).The larger is the keyspace, the longer it takes to find the key. Each bit added to the key doubles the time needed."
+            },
+            {
+                "value" : "Describe the Caesar cipher",
+                "answer" : "Shift every letter of a plaintext of a certain amount of letters in the alphabet. The key is then a simple number between 1 and 25\n-> Keyspace too small\n->Vulnerable to frequency analysis"
+            },
+            {
+                "value" : "Describe the substitution cipher",
+                "answer" : "Substitute one letter with another, can also be applied to n-grams. The key is then a subsitution alphabet\n-> Mono-alphabetic substitution is vulnerable to frequency analysis"
+            },
+            {
+                "value" : "What is frequency analysis ?",
+                "answer" : "Comparing symbol frequencies in the ciphertext and the destination language"
+            },
+            {
+                "value" : "Describe the Vigenère Cipher",
+                "answer" : "Repeat a given key as many times as necessary to have a key with the same length as the plaintext that must be encrypted.Then, for each letter p in the plaintext, perfom (p + k ) mod 26 where k is the corresponding letter in the key."
+            },
+            {
+                "value" : "When does a crypto-system is computationally secure ?",
+                "answer" : "When it cannot be broken by an adversary with limited capabilities."
+            },
+            {
+                "value" : "When does a crypto-system is unconditionally secure ?",
+                "answer" : "When it cannot be broken by an adversary with unlimited capabilities."
+            },
+            {
+                "value" : "What is the classical classification of attacks when you're attacking an algorithm ?",
+                "answer" : "- ciphertext-only attack : attacker has access to the ciphertext only\n- known plaintext attack : An attack where the attacker only possess the cyphertext and at least partially the plaintext\n- chosen plaintext attack : An attack where the attacker can choose a plaintext and obtain the corresponding cyphertext\n- chosen ciphertext attack : An attack where the attacker can choose a cyphertext and obtain the corresponding plaintext"
+            },
+            {
+                "value" : "What is a good cipher ?",
+                "answer" : "A good cipher should not reveal any information about the plaintext.\n\n\t->A perfectly secure crypto-system would be a system such that $Pr[P=p|C=c] = Pr[P=p]$."
+            },
+            {
+                "value" : "Describe Shannon's theorem",
+                "answer" : "In a cryptosystem (K,P,C,E,D) where K is a keyspace, P the set of every possible plaintext, C the set of every possible ciphertext, E and D are Encryption and Decryption algorithms:\n\nThe cryptosystem provides perfect secrecy if and only if :\n\t-> Every key has the same probability to occur\n\t->forall p in P, forall c in C,there is one and only one k in K such that c=E(k,p)"
+            },
+            {
+                "value" : "What is a Pseudo Random Number Generator (PRNG) ?",
+                "answer" : "Computers cannot directly generate random numbers. Thus, we need a sufficiently unpredictable seed to be considered as random (Hard drive sensors, etc). To be secured, a PNRG must be :\n\t- Equitably distributed\n\t- Not vulnerable to correlation tests (Trying to retrieve the original seed)"
+            },
+            {
+                "value" : "What is symmetric cryptography ?",
+                "answer" : "Ciphers where the same key is used to encrypt and decrypt a message.\n\t- Security depends on the algorithm and the secrecy of the key\n\t- One main problem : How can I securely exchange the key ?"
+            },
+            {
+                "value" : "Describe how One-time pad cihper works.",
+                "answer" : "Cipher based on the one-time usage of a random stream of data of the same size as the plaintext. Then, for each letter, $c_i = p_i + k_i$ and $p_i = c_i + k_i$ where + is the modulo addition.\n\t -> Guarantees perfect secrecy if the size of the keyspace is the same as the size of the plaintext space and keys are uniformly distributed.\n\t ->Such key management is infeasible in pratice"
+            },
+            {
+                "value" : "Describe how Stream cipher works.",
+                "answer" : "One-Time pad where a seed is exchanged instead of keys. This seed is then used to generate as many value as necessary for the One-Time pad algorithm.\n\t-> The whole security depends on how secure the PNRG is."
+            },
+            {
+                "value" : "Describe how RC4 cipher works.",
+                "answer" : "RC4 fonctionne de la façon suivante : la clef RC4 permet d’initialiser un tableau de 256 octets en répétant la clef autant de fois que nécessaire pour remplir le tableau. Par la suite, des opérations très simples sont effectuées : les octets sont déplacés dans le tableau, des additions sont effectuées, etc. Le but est de mélanger autant que possible le tableau. Finalement on obtient une suite de bits pseudo-aléatoires qui peuvent être utilisés pour chiffrer les données via un XOR. (Wikipédia)"
+            },
+            {
+                "value" : "Quelle est la différence entre 'confusion' et 'diffusion' ?",
+                "answer" : "- Confusion :  Fait que le ciphertext soit complètement inintelligible, s'applique par des méchanismes de substitution\n-Diffusion : Fait qu'un petit changement dans le plaintext change l'entièreté du ciphertext, s'applique par des méchanismes de permutations"
+            },
+            {
+                "value" : "Describe how block cipher works.",
+                "answer" : "Block ciphering consists in a decomposition of the plaintext in different blocks of same size which will be encrypted differently. There are different mode of operation (see slides 55 - 58 for illustrations)\n->Electronic CodeBook Mode (ECB): Each block is ciphered independently.\n->Cipher Block Chaining mode (CBC) : Each block is XORed with the previously ciphered block before beeing encrypted. The first block is encrypted with an 'initialization vector'\n->Cipher FeedBack Mode (CFB) : Each block of plaintext is XORed with the previous block after it went through encryption\n-> Counter Mode (CTR) : Chaque plaintext subit un XOR avec le résultat du chiffrement d'un grand nombre aléatoire (appelé 'nonce') concaténé à un compteur de block. Le compteur permet de faire changer un petit peu la clé pour chaque bloc."
+            },
+            {
+                "value" : "What is a padding ?",
+                "answer" : "La façon dont on remplit le dernier bloc d'un chiffrement par block pour atteindre la taille suffisante. Une manière de faire est de compter le nombre d'octets restant à remplir, et à répéter cette valeur sur les octets en question. Ainsi, quand bob a déchiffré le dernier bloc, si le dernier octet indique un nombre n, et que tous les n derniers blocs indiquent cette même valeur n, alors il s'agit d'un padding qu'il peut virer."
+            },
+            {
+                "value" : "Describe the DES algorithm",
+                "answer" : "Algorithme de chiffrement obsolète, fonctionnement expliqué dans les schémas DES dans le dossier pictures."
+            },
+            {
+                "value" : "What is AES ?",
+                "answer" : "Also called Rijndael cipher, a block cipher algorithm using 128bits blocks and keys can be either 128, 192 or 256 bits. Uses 10,12, or 14 rounds depending on the key length."
+            },
+            {
+                "value" : "Dans la gestion des clés, pourquoi qu'est-ce qui incite à changer de clés et qu'est-ce qui incite à les garder ?",
+                "answer" : "Il s'agit d'un 'tradeoff' entre la sécurité du changement de clés et les coûts d'infrastructure liés au changement de clés."
+            },
+            {
+                "value" : "Quels sont les problèmes habituels liés à la gestion de clés ?",
+                "answer" : "- Potentiellement beaucoup de clés à gérer : si on compte n personnes, on a un total de n-1 clés par personne (divisé par deux car une clé est utilisée par deux personnes).\n- Les clés doivent rester secrètes à tout moment."
             }
         ]
     }
