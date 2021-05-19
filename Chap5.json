@@ -3,9 +3,111 @@
         "name" : "Matière du cours de Sécurité, juin 2021, Chapitre 5",
         "elements" : [
             {
-                "value" : "The question",
-                "answer" : "The answer"
+                "value" : "Qu'est-ce qu'une permission ?",
+                "answer" : "C'est l'autorisation accordée à un sujet d'effectuer une action sur une ressource."
+            },
+            {
+                "value" : "Qu'est-ce qu'une ressource ?",
+                "answer" : "Une ressource est un concept abstrait qui peut être aussi bien un fichier, qu'une zone mémoire ou encore un dossier médical."
+            },
+            {
+                "value" : "Qu'est-ce qu'une règle d'accès ?",
+                "answer": "C'est assigner une permission. On peut potentiellement lui ajouter des conditions (être sur le réseau local, qu'il soit entre 7h et 18h, ...)." 
+            },
+            {
+                "value" : "Qu'est-ce qu'une politique d'accès ?",
+                "answer": "C'est un ensemble de règles. Des règles peuvent se contredire entre elles." 
+            },
+            {
+                "value" : "Qu'est-ce que le contrôle d'accès ?",
+                "answer": "Il s'agit d'un mécanisme mis en place qui force l'exécution de la politique. Il est chargé de régler les conflits potentiels de celle-ci." 
+            },
+            {
+                "value" : "Quels sont les 3 besoins d'un mécanisme de contrôle d'accès ?",
+                "answer" : "1) Une bonne identification du sujet.\n 2) Un système de contrôle d'accès sécurisé (pas pervertible).\n 3) Le principe de propriété / responsabilité pour définir le contexte opérationnel lié à la ressource."
+            },
+            {
+                "value" : "Quels sont les principes de base d'un modèle de contrôle d'accès ?",
+                "answer" : "1) Tous les accès doivent être gérés (par le moniteur de référence), cela permet d'éviter la présence de backdoor. \n 2) Règle du moindre privilège: On associe à chaque utilisateur que le strict minimum dont il a besoin.\n 3) Principe de séparation des rôles: Pour des actions sensibles, on a besoin de l'action de plusieurs personnes/rôles. Il est important qu'une même personne ne puisse pas introduire une demande et la valider en même temps par exemple."
+            },
+            {
+                "value" : "Qu'est-ce qu'un modèle de contrôle d'accès ?",
+                "answer" : "C'est un ensemble de concepts, relations et contraintes qui permettent d'exprimer une politique d'accès formellement."
+            },
+            {
+                "value" : "Pourquoi du formalisme dans le modèle ?",
+                "answer" : "Le formalisme permet de valider automatiquement une politique (complétude, cohérence) mais aussi de l'exécuter automatiquement."
+            },
+            {
+                "value" : "Citez les différents modèles de contrôle d'acès.",
+                "answer" : "Il y en a énormémement et on ne pourrait pas tous les citer mais parmi les plus fréquents on trouve:\n 1) Le modèle discrétionnaire (Discretionary Access Control - DAC), très libre.\n 2) Le modèle mandataire (Mandatory Access Control - MAC), très strict.\n 3) Le modèle Bell - La Padula (variante de MAC).\n 4) Le modèle Biba (variante de MAC).\n 5) Le modèle basé sur les rôles (Role-Based Access Control - RBAC), un des plus répandus.\n 6) Le modèle basé sur les attributs (Attribute-Based Access Control - ABAC), le plus général.\n 7) Privacy Aware RBAC (P-RBAC), RBAC avec le RGPD.\n 8) Organization-Based Access Control (OrBAC), RBAC mais avec des exceptions."
+            },
+            {
+                "value" : "Expliquez le modèle DAC.",
+                "answer" : "Le propriétaire définit les droits sur ses ressources. On a une matrice de permission avec tous les fichiers et tous les utilisateurs.\n Le principal avantage est que c'est très libre et on peut donc spécifier facilement au cas par cas.\n Les faiblesses sont la difficulté de gérer une telle matrice avec l'ajout ou la suppression de fichiers/utilisateurs et le manque de politique globale (ce qui peut causer un chaos rapidement)."
+            },
+            {
+                "value" : "Y a-t-il moyen d'améliorer DAC ?",
+                "answer" : "On peut utiliser des groupes (de fichiers ou d'utilisateurs) pour appliquer plusieurs règles (le problème de gestion est déplacé dans les groupes).\n On peut également voir dans certaines versions un système de transfert de propriété ou de délégation de droit (accès en mon nom mais ton nom est affiché => principe de tracabilité). "
+            },
+            {
+                "value" : "Expliquez le modèle MAC.",
+                "answer" : "Le système définit les permissions en fonction des règles établies à sa conception (très peu flexible). Il s'appuie sur plusieurs niveaux de sécurité (MultiLevel Security - MLS).\n Chaque ressource et chaque utilisateur ont un niveau de sécurité. La décision d'accès se base sur l'accréditation et le niveau de sécurité du document.\n Il y a également le principe du besoin de savoir, c'est-à-dire qu'il est possible de compartimenter les informations pour qu'un utilisateur avec le plus haut niveau d'accréditation n'ait pas accès à toutes les données. La force de ce modèle est sa grande fiabilité et sécurité. Sa faiblesse est par contre son manque de flexibilité et la complexité à gérer une exception."
+            },
+            {
+                "value" : "Donnez les règles du modèle de Bell - La Padula.",
+                "answer" : "1) No Read Up: Lorsqu'une action est de type 'read', elle est autorisée uniquement si le niveau d'accréditation du sujet est égal ou supérieur à celui de la ressource.\n 2) No Write Down: Lorsqu'une action est de type 'write', elle est autorisée uniquement si le niveau d'accréditation du sujet est égal ou inférieur à celui de la ressource."
+            },
+            {
+                "value" : "Décrivez le modèle de Bell - La Padula ?",
+                "answer" : "Le modèle se base sur 2 règles de bases:\n1) No Read Up.\n2) No Write Down.\nIl garantit la confidentité mais pas l'intégrité.\nIl y a 2 mécanismes possibles pour permettre le Write Down dans certains cas:\nA) Baisser le niveau d'accréditation temporairement.\nB) Principe du sujet de confiance (utilisateur au-dessus des règles).\nCe genre de modèle est particulièrement utile pour les logs et les environnements nécessitant beaucoup de sécurité."
+            },
+            {
+                "value" : "Décrivez le modèle de Biba.",
+                "answer" : "Il s'agit de l'inverse du modèle de Bell - La Padula (No Read Down, No Write Up). Il garantit l'intégrité mais pas la confidentialité. Il est actuellement utilisé par SELinux."
+            },
+            {
+                "value" : "Décrivez le modèle RBAC.",
+                "answer" : "Ce modèle veut se rapprocher des concepts de métiers et utilise la notion de rôle. Il veut enlever la rigidité de MAC en simplifiant la gestion de DAC.\nDans ce modèle, des permissions (/!\\ différentes des perms habituelles) sont associées à des rôles. Cela permet de séparer la gestion des permissions de celle des utilisateurs.\nPour valider une action, le système regarde si l'utilisateur a un rôle qui inclut parmi les permissions l'action souhaitée. Cette approche permet d'appliquer la règle du moindre privilège, de bien séparer les rôles et d'autres contraintes (comme une cardinalité des rôles).\nLa séparation des rôles est dynamique, cela permet d'activer par session uniquement un sous-ensemble des rôles de l'utilisateur.\n Il y a également une hiérarchie des rôles (avec le principe d'héritage).\nLe principal problème de RBAC repose dans la définition des rôles et des permissions cohérentes associées."
+            },
+            {
+                "value" : "Qu'est-ce qu'une permission dans le modèle RBAC ?",
+                "answer" : "C'est l'association entre l'objet et l'action. L'utilisateur n'est pas pris en compte."
+            },
+            {
+                "value" : "Qu'est-ce q'un rôle dans le modèle RBAC ?",
+                "answer" : "Il s'agit de la fonction définie dans le contexte de l'organisation. Chaque rôle doit avoir un propriétaire qui est utile pour 3 choses:\n1) Définir le rôle et les permissions associées.\n2) Définir les règles d'assignation du rôle.\n3) Rapporter les incidents liés au rôle (surplus de permission)."
+            },
+            {
+                "value" : "Donnez les 3 étapes de gestion du modèle RBAC.",
+                "answer" : "1) Définir les permissions (action - objet).\n2) Assigner les permissions aux rôles.\n3) Lier les rôles aux utilisateurs."
+            },
+            {
+                "value" : "Décrivez le modèle ABAC.",
+                "answer" : "L'accès est conditionné par des attributs. Ces attributs peuvent être:\n- Des caractéristiques du sujet.\n- Des caractéristiques de l'objet.\n- Des conditions environnementales (heure, date, lieu...).\n- Un ensemble de politiques définies. On peut exprimer tous les autres modèles avec le modèle ABAC, il est très générique."
+            },
+            {
+                "value" : "Décrivez le modèle P-RBAC.",
+                "answer" : "Il s'agit d'une version étendue de RBAC qui ajoute des notions liées à la protection de la vie privée en prenant en compte la finalité de l'action pour l'autoriser ou non (RGPD). Il ajoute également des notions de condition et d'obligation (liées à l'action)."
+            },
+            {
+                "value" : "Décrivez le modèle OrBAC.",
+                "answer" : "Il est utilisé dans des structures complexes (organismes hospitaliers) où les politiques d'accès ne sont pas forcément les mêmes aux différents niveaux de la structure. Chaque niveau définit sa politique sur 2 plans:\n- Le plan abstrait en RBAC en ajoutant la notion de contexte.\n- Le plan concret qui associe un objet à une action et un utilisateur (à la façon de DAC) afin d'exprimer des exceptions qu'on ne veut pas généraliser. On trouve également les notions d'obligation et de condition."
+            },
+            {
+                "value" : "Quel est l'intérêt d'une approche décentralisée de l'autorisation ?",
+                "answer" : "La politique d'accès doit être appliquée à plusieurs endroits et on ne veut la rédiger qu'une seule fois. On veut également que chaque modification soit appliquée partout. En ayant un endroit central de définition avec une mise en oeuvre distribuée pour l'exécution, on évite ces problèmes. On veut séparer l'application de la prise de décision."
+            },
+            {
+                "value" : "Quels sont les composants de l'approche décentralisée de l'information ?",
+                "answer" : "- Policy Administration Point (PAP): gestion des politiques (1 seul suffit).\n- Policy Enforcement Point (PEP): applique la décision (1 à chaque endroit où la politique doit être appliquée).\n- Policy Decision Point (PDP): prend la décision (1 seul peut suffire mais le répliquer n'est pas dénué de sens).\n- Policy Information Point (PIP): donne les infos supplémentaires contextuelles (pareil que PDP)."
+            },
+            {
+                "value" : "Comment les composants de l'approche décentralisée interagissent-ils entre eux ?",
+                "answer" : "Voir slides 26-27 du chapitre 5."
             }
+
+
         ]
     }
     
