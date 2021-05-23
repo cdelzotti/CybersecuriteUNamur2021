@@ -3,8 +3,48 @@
         "name" : "Matière du cours de Sécurité, juin 2021, Chapitre 4",
         "elements" : [
             {
-                "value" : "The question",
-                "answer" : "The answer"
+                "value" : "Qu'est-ce que l'authentification ?",
+                "answer" : "Il s'agit de la vérification de l'identité d'une personne, d'un système, d'une entité quelconque."
+            },
+            {
+                "value" : "Quelles sont les 2 raisons principales qui motivent l'authentification ?",
+                "answser" : "Le contrôle d'accès (autorisations) et la traçabilité"
+            },
+            {
+                "value" : "Quelles sont les différentes méthodes d'authentification ?",
+                "answser" : "On peut établir son identité avec:\n\t- Quelque chose que l'on connaît (mot de passe, PIN)\n\t- Quelque chose que l'on possède (carte d'identité)\n\t- Quelque chose que l'on est (capteurs biométriques)\n\t- Une combinaison de plusieurs méthodes (carte bancaire = carte + PIN)"
+            },
+            {
+                "value" : "Quelle est la meilleure manière de stocker un mot de passe ?",
+                "answser" : "Il faut stocker son empreinte (hash). En général, un mot de passe est hashé des milliers de fois avant d'être stocké (pour éviter des attaques par dictionnaire, en hashant les mots de passe les plus courants puis en les testant)"
+            },
+            {
+                "value" : "Quelles sont les différentes méthodes de cracker un mot de passe ?",
+                "answser" : "Les différentes méthodes sont:\n\t- La méthode brute force = recherche exhaustive: pour tous les mots de passe possibles, calculer leur hash et le comparer au hash du mot de passe à cracker\n\t- L'attaque par pré-calcul: calculer et stocker tous les hashs des mots de passe possibles (par exemple une liste des mots de passe les plus fréquents). Lorsqu'on veut cracker un mot de passe, il suffit de vérifier si son hash existe dans la base de données\n\t- Le compromis temps-mémoire = méthode de Hellman et son amélioration (rainbow tables): le but est de consommer moins de temps que dans la méthode 1 et moins de mémoire que dans la méthode 2. Ces méthodes sont très bien expliquées par Jean-Noël Colin dans son magnifique cours :)"
+            },
+            {
+                "value" : "Comment prouver qu'une organisation est bien celle qu'elle prétend être dans son certificat ?",
+                "answser" : "En utilisant une méthode de défi/réponse: on envoie une information à l'organisation, chiffrée grâce à sa clé publique qui est mentionnée dans son certificat. Si l'organisation peut déchiffrer le message, cela veut dire qu'elle a accès à la clé privée liée à la clé publique mentionnée dans le certificat"
+            },
+            {
+                "value" : "Que sont les attaques par ingénierie sociale ?",
+                "answser" : "Il s'agit d'une série de techniques de manipulation qui vont permettre d'obtenir quelque chose de quelqu'un qu'il n'aurait pas fait en temps normal. Par exemple, on peut jouer sur la gentillesse, la naïveté ou le sens des responsabilités de quelqu'un"
+            },
+            {
+                "value" : "Comment se protéger contre les attaques par ingénierie sociale ?",
+                "answser" : "En passant par des formations: informer les employés sur comment et quand rapporter un problème, définir des politiques claires, etc."
+            },
+            {
+                "value" : "Qu'est-ce qu'une identité ?",
+                "answser" : "Une identité est définie comme étant l'ensemble des informations dont une organisation dispose à propos d'une personne, d'un système ou d'une entité"
+            },
+            {
+                "value" : "Où peut-on stocker les données sur les identités des utilisateurs?",
+                "answser" : "Les données peuvent être stockées:\n\t- Sur un fichier (uniquement pour des contextes restreints)\n\t- Dans des bases de données (cette approche reste assez fermée)\n\t- Sur un serveur d'annuaires (LDAP = protocole permettant d'interagir avec ce serveur): structure en arbre, chaque noeud représente une information, noeud racine = organisation, noeud \"feuille\" = utilisateur, employé"
+            },
+            {
+                "value" : "Comment peuvent être réparties les sources de données des utilisateurs au sein d'une organisation ?",
+                "answser" : "\t- Sources indépendantes: chaque application possède sa propre source de données (une application va stocker les données utilisateur sur un fichier, l'autre va utiliser LDAP, etc.)\n\t- Sources synchronisées: même chose que sources indépendantes sauf qu'il existe des mécanismes qui assurent que les données soient synchronisées\n\t- Sources partagées: plusieurs applications peuvent utiliser une même source de données\n\t- Service d'authentification: service tiers unique central auquel toutes les applications vont se connecter"
             }
         ]
     }
