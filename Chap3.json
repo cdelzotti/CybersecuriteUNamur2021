@@ -125,7 +125,53 @@
             {
                 "value" : "Quels sont les problèmes habituels liés à la gestion de clés ?",
                 "answer" : "- Potentiellement beaucoup de clés à gérer : si on compte n personnes, on a un total de n-1 clés par personne (divisé par deux car une clé est utilisée par deux personnes).\n- Les clés doivent rester secrètes à tout moment."
-            }
+            },
+            {
+                "value" : "Quelles sont les étapes importantes lors de la génération de la clé ?",
+                "answer" : "On évite les espace de clés restreint, les clés doivent être aléatoire,assez longue,et renouvellé periodiquement "
+            },
+            {
+                "value" : "Qu'est ce que le PBE dans le contexte du chiffrement de clé ? A quoi cela sert-il ?",
+                "answer" : "Le PBE est un moyen de chiffrer une clé sans avoir à la stocké via un mot de passe auquel on aura rajouté du sel pour augmenter l'entropie "
+            },
+            {
+                "value" : "A quoi sert le sel dans le contexte du chiffrement?",
+                "answer" : "Augmenter l'entropie et éviter les attaque pré-calculatoire en ajoutant des données aléatoires au MDP "
+            },
+            {
+                "value" : "Qu'est ce que KDC ? ",
+                "answer" : "Un moyen pour deux agents qui ne se font pas forcément confiance d'échanger des clés via un third party "
+            },
+            {
+                "value" : "Quels sont les principes et utilisations possibles du chiffrement asymétrique ? ",
+                "answer" : "L'agent n'a plus une seule clé mais deux, une clé publique et une clé privé, ce qui a été crypté avec une peu être décrypté avec l'autre ce qui permet plusieurs styles d'utilisations, la confidentialité, la protection des données, l'authentification. (Voir slide 84 pour fonctionnement détaillé) "
+            },
+            {
+                "value" : "Qu'est ce qui rend le chiffrement de Diffie-helman computationally secure ? ",
+                "answer" : "Le problème du logarithme discret"
+            },
+            {
+                "value" : "Qu'est ce qui rend le chiffrement RSA computationally secure ? ",
+                "answer" : "La complexité de calculer la factoriel d'un très grand nombre"
+            },
+            {
+                "value" : "Qu'est ce qui rend le chiffrement de El Gamal computationally secure ? ",
+                "answer" : "Le problème du logarithme discret"
+            },
+            {
+                "value" : "Que sont les concepts de HMAC et de DSA ? Que permet DSA que ne permet pas HMAC ? ",
+                "answer" : "HMAC pour Hash Message Authentication Code est un mécanisme d'authentification et de non répudiation basé sur la cryptographie symétrique, DSA pour digital signature algorithm est le même concept mais en asymétrique,comme HMAC est symétrique il est impossible de distinguer qui aurait écrit un message parmis les différent possesseur de la clé,DSA quand à lui comme il est asymétrique permet de distinguer les différents agents. "
+            },
+            {
+                "value" : "Qu'est ce qu'un certificat digital ",
+                "answer" : "C'est un moyen de prouver qu'une certaine clé publique appartient bien à une certaines entité (personne,entreprise,serveur,...) ces certificats doivent bien sûr être émit par un tier de confiance."
+            },
+            {
+                "value" : "Qu'est ce qu'un PKI et à quoi cela sert il ?  ",
+                "answer" : "PKI pour public key infrastructure c'est un ensemble d'entité qui gère les certificats,composé d'un certificate authority qui authentifie les sujets,révoque certains certificats et d'une registration authority qui valide les informations provenant des sujets, ."
+            },
+
+
         ]
     }
     
